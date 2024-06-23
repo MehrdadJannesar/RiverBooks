@@ -1,4 +1,4 @@
-@RiverBooks.Web_HostAddress = http://localhost:5256
+@RiverBooks.Web_HostAddress = https://localhost:7042
 
 GET {{RiverBooks.Web_HostAddress}}/books/
 Accept: application/json
@@ -41,3 +41,46 @@ Content-Type: application/json
   "id": "8AFCE069-B341-488D-89E7-FEE321DF6E95",
   "price": 9.99
 }
+###
+POST {{RiverBooks.Web_HostAddress}}/users/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "Email": "jannesar.computer@gmail.com",
+  "Password":"Password@123"
+}
+
+###
+
+POST {{RiverBooks.Web_HostAddress}}/users/login
+Accept: application/json
+Content-Type: application/json
+
+{
+  "Email": "jannesar.computer@gmail.com",
+  "Password":"Password@123"
+}
+###
+
+@token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbEFkZHJlc3MiOiJqYW5uZXNhci5jb21wdXRlckBnbWFpbC5jb20iLCJpYXQiOjE3MTkxNjAzOTMsImV4cCI6MTcxOTE2Mzk5MywibmJmIjoxNzE5MTYwMzkzfQ.YrYUMbsL3bv226sOzPutR2QBcOPUoMRWB8OrlKzbT50
+
+# Add item to cart
+POST {{RiverBooks.Web_HostAddress}}/cart
+Accept: text/plain
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "bookId":"a89f6cd7-4693-457b-9009-02205dbbfe45",
+  "quantity":1
+}
+
+###
+
+# List items in cart
+GET {{RiverBooks.Web_HostAddress}}/cart
+Accept: application/json
+Authorization: Bearer {{token}}
+
+###
