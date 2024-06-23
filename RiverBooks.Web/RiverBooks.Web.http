@@ -1,0 +1,43 @@
+@RiverBooks.Web_HostAddress = http://localhost:5256
+
+GET {{RiverBooks.Web_HostAddress}}/books/
+Accept: application/json
+
+###
+@BookID = a89f6cd7-4693-457b-9009-02205dbbfe45
+
+GET {{RiverBooks.Web_HostAddress}}/books/{{BookID}}
+Accept: application/json
+
+###
+
+POST {{RiverBooks.Web_HostAddress}}/books/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": "8AFCE069-B341-488D-89E7-FEE321DF6E95",
+  "title": "Modular Monolith",
+  "author": "M Jannesar",
+  "price": 22.99
+}
+
+###
+// Test
+GET {{RiverBooks.Web_HostAddress}}/books/8AFCE069-B341-488D-89E7-FEE321DF6E95
+Accept: application/json
+
+###
+DELETE {{RiverBooks.Web_HostAddress}}/books/8AFCE069-B341-488D-89E7-FEE321DF6E95
+Accept: application/json
+
+###
+
+POST {{RiverBooks.Web_HostAddress}}/books/8AFCE069-B341-488D-89E7-FEE321DF6E95/pricehistory
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": "8AFCE069-B341-488D-89E7-FEE321DF6E95",
+  "price": 9.99
+}
