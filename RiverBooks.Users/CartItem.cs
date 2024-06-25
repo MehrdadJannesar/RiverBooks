@@ -26,5 +26,15 @@ public class CartItem
   {
     Quantity = Guard.Against.Negative(quantity);
   }
+
+  internal void UpdateDescription(string description)
+  {
+    Description = Guard.Against.NullOrEmpty(description); 
+  }
+
+  internal void UpdateUnitPrice(decimal unitPrice)
+  {
+    Price = Guard.Against.Negative(unitPrice);
+  }
 }
 

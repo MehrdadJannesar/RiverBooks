@@ -18,8 +18,8 @@ public class ApplicationUser : IdentityUser
     if (existingBook != null)
     {
       existingBook.UpdateQuantity(existingBook.Quantity + item.Quantity);
-      //existingBook.UpdateDescription(item.Description);
-      //existingBook.UpdateUnitPrice(item.UnitPrice);
+      existingBook.UpdateDescription(item.Description);
+      existingBook.UpdateUnitPrice(existingBook.Price + item.Price);
       return;
     }
     _cartItems.Add(item);
