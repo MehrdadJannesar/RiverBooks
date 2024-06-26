@@ -30,8 +30,9 @@ builder.Services.AddFastEndpoints()
 
 // Add Module Services
 List<Assembly> mediatRAssemblies = [typeof(Program).Assembly];
-builder.Services.AddBookServices(builder.Configuration, logger, mediatRAssemblies);
+builder.Services.AddBookModuleServices(builder.Configuration, logger, mediatRAssemblies);
 builder.Services.AddUserModuleServices(builder.Configuration, logger, mediatRAssemblies);
+builder.Services.AddOrderProcessingModuleServices(builder.Configuration, logger, mediatRAssemblies);
 
 // Set up MediatR
 builder.Services.AddMediatR(cfg =>
@@ -44,6 +45,7 @@ app.UseAuthentication()
 
 app.UseFastEndpoints()
   .UseSwaggerGen();
+
 // زیرا اگر از HTTP به HTTPS هدایت شود، مجوز شما را ارسال نمی کند، این کار تمام شده است، ما فقط اینجا به پایین اسکرول می کنیم.
 //app.UseHttpsRedirection();
 

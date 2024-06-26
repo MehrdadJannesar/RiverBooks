@@ -6,7 +6,7 @@ using RiverBooks.Users.Data;
 
 namespace RiverBooks.Users;
 
-public static class UsersModuleExtensions
+public static class UsersModuleServiceExtensions
 {
   public static IServiceCollection AddUserModuleServices(
     this IServiceCollection services, ConfigurationManager config,
@@ -21,10 +21,10 @@ public static class UsersModuleExtensions
       .AddEntityFrameworkStores<UsersDbContext>();
 
     // Add User Services
-    services.AddScoped<IApplicationUserRepoisory, EfApplicationUserRepository>();
+    services.AddScoped<IApplicationUserRepository, EfApplicationUserRepository>();
 
     // if using MediatR in this module, add any assemblies that contain handlers to the list
-    mediatRAssemblies.Add(typeof(UsersModuleExtensions).Assembly);
+    mediatRAssemblies.Add(typeof(UsersModuleServiceExtensions).Assembly);
 
     logger.Information("{Module} module services registered", "Users");
 

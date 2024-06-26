@@ -2,7 +2,7 @@
 using Ardalis.Result;
 using FastEndpoints;
 using MediatR;
-using RiverBooks.Users.UseCasses;
+using RiverBooks.Users.UseCasses.Cart.List;
 
 namespace RiverBooks.Users.CartEndpoints;
 

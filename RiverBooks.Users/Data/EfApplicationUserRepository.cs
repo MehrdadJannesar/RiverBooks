@@ -2,7 +2,7 @@
 
 namespace RiverBooks.Users.Data;
 
-internal class EfApplicationUserRepository : IApplicationUserRepoisory
+internal class EfApplicationUserRepository : IApplicationUserRepository
 {
   private readonly UsersDbContext _dbcontext;
 

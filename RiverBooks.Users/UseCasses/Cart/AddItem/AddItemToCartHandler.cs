@@ -2,14 +2,14 @@
 using MediatR;
 using RiverBook.Books.Contracts;
 
-namespace RiverBooks.Users.UseCasses;
+namespace RiverBooks.Users.UseCasses.Cart.AddItem;
 
 public class AddItemToCartHandler : IRequestHandler<AddItemToCartCommand, Result>
 {
-  private readonly IApplicationUserRepoisory _userRepoisory;
+  private readonly IApplicationUserRepository _userRepoisory;
   private readonly IMediator _mediator;
 
-  public AddItemToCartHandler(IApplicationUserRepoisory userRepoisory,
+  public AddItemToCartHandler(IApplicationUserRepository userRepoisory,
     IMediator mediator)
   {
     _userRepoisory = userRepoisory;
@@ -30,7 +30,7 @@ public class AddItemToCartHandler : IRequestHandler<AddItemToCartCommand, Result
 
     var bookDetails = result.Value;
 
-    string Description = $"{bookDetails.Title} by {bookDetails.Author}";
+    var Description = $"{bookDetails.Title} by {bookDetails.Author}";
 
     var newCartItem = new CartItem(request.BookId,
       Description,

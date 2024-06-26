@@ -3,14 +3,14 @@ using MediatR;
 using RiverBooks.Users.CartEndpoints;
 using RiverBooks.Users.Data;
 
-namespace RiverBooks.Users.UseCasses;
+namespace RiverBooks.Users.UseCasses.Cart.List;
 
 internal class ListCartItemsQueryHandler : IRequestHandler<ListCartItemsQuery,
   Result<List<CartItemDto>>>
 {
-  private readonly IApplicationUserRepoisory _userRepository;
+  private readonly IApplicationUserRepository _userRepository;
 
-  public ListCartItemsQueryHandler(IApplicationUserRepoisory userRepository)
+  public ListCartItemsQueryHandler(IApplicationUserRepository userRepository)
   {
     _userRepository = userRepository;
   }
