@@ -37,7 +37,7 @@ RiverBooks is a modular monolith application designed to manage book orders, use
 
 ### Prerequisites
 
-- .NET 6 SDK
+- .NET 8 SDK
 - Docker
 
 ### Installation
@@ -55,12 +55,7 @@ RiverBooks is a modular monolith application designed to manage book orders, use
 
 ### Running the Application
 
-1. Start the Docker containers:
-    ```sh
-    docker-compose up
-    ```
-
-2. The application will be available at `http://localhost:5000`.
+After setting up docker images, run easily...
 
 ### Docker Configuration
 
