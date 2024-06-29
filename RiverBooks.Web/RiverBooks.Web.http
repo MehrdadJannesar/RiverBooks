@@ -42,23 +42,26 @@ Content-Type: application/json
   "price": 9.99
 }
 ###
+
+# Create User
 POST {{RiverBooks.Web_HostAddress}}/users/
 Accept: application/json
 Content-Type: application/json
 
 {
-  "Email": "jannesar.computer@gmail.com",
+  "Email": "jannesar29.computer@gmail.com",
   "Password":"Password@123"
 }
 
 ###
 
+# Login User
 POST {{RiverBooks.Web_HostAddress}}/users/login
 Accept: application/json
 Content-Type: application/json
 
 {
-  "Email": "jannesar.computer@gmail.com",
+  "Email": "jannesar3.computer@gmail.com",
   "Password":"Password@123"
 }
 ###

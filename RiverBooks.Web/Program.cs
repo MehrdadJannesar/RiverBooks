@@ -5,6 +5,7 @@ using FastEndpoints.Swagger;
 using RiverBooks.Books;
 using RiverBooks.SharedKernel;
 using RiverBooks.Users;
+using RiverBooks.EmailSending;
 using RiverBooks.Users.UseCasses.Cart.AddItem;
 using Serilog;
 
@@ -44,6 +45,7 @@ List<Assembly> mediatRAssemblies = [typeof(Program).Assembly];
 builder.Services.AddBookModuleServices(builder.Configuration, logger, mediatRAssemblies);
 builder.Services.AddUserModuleServices(builder.Configuration, logger, mediatRAssemblies);
 builder.Services.AddOrderProcessingModuleServices(builder.Configuration, logger, mediatRAssemblies);
+builder.Services.AddEmailSendingModuleServices(builder.Configuration, logger, mediatRAssemblies);
 
 // Set up MediatR
 builder.Services.AddMediatR(cfg =>

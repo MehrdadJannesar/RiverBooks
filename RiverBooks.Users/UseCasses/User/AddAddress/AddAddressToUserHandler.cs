@@ -9,8 +9,8 @@ using Microsoft.Extensions.Logging;
 using RiverBooks.Users.Intefaces;
 using static RiverBooks.Users.ApplicationUser;
 
-namespace RiverBooks.Users.UseCasses.User;
-internal class AddAddressToUserHandler:IRequestHandler<AddAddressToUserCommand, Result>
+namespace RiverBooks.Users.UseCasses.User.AddAddress;
+internal class AddAddressToUserHandler : IRequestHandler<AddAddressToUserCommand, Result>
 {
   private readonly IApplicationUserRepository _userRepository;
   private readonly ILogger<AddAddressToUserHandler> _logger;

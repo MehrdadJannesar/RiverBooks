@@ -2,7 +2,7 @@
 using Ardalis.Result;
 using FastEndpoints;
 using MediatR;
-using RiverBooks.Users.UseCasses.User;
+using RiverBooks.Users.UseCasses.User.ListAddresses;
 
 namespace RiverBooks.Users.UserEndpoints;
 internal class ListAddresses :

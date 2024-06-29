@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Security.Claims;
 using Ardalis.Result;
 using FastEndpoints;
 using MediatR;
-using RiverBooks.Users.UseCasses.User;
+using RiverBooks.Users.UseCasses.User.AddAddress;
 
 namespace RiverBooks.Users.UserEndpoints;
 internal class AddAddres:Endpoint<AddAddressRequest>
