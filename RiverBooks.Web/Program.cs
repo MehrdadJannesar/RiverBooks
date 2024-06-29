@@ -5,6 +5,7 @@ using FastEndpoints.Swagger;
 using RiverBooks.Books;
 using RiverBooks.SharedKernel;
 using RiverBooks.Users;
+using RiverBooks.Users.UseCasses.Cart.AddItem;
 using Serilog;
 
 var logger = Log.Logger = new LoggerConfiguration()
@@ -19,15 +20,24 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Host.UseSerilog((_, config) =>
   config.ReadFrom.Configuration(builder.Configuration));
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
 builder.Services.AddFastEndpoints()
   .AddJWTBearerAuth(builder.Configuration["Auth:JwtSecret"]!)
   .AddAuthorization()
   .SwaggerDocument();
+
+
+//builder.Host.UseSerilog((_, config) =>
+//  config.ReadFrom.Configuration(builder.Configuration));
+
+//// Add services to the container.
+//// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+//builder.Services.AddEndpointsApiExplorer();
+//builder.Services.AddSwaggerGen();
+
+//builder.Services.AddFastEndpoints()
+//  .AddJWTBearerAuth(builder.Configuration["Auth:JwtSecret"]!)
+//  .AddAuthorization()
+//  .SwaggerDocument();
 
 // Add Module Services
 List<Assembly> mediatRAssemblies = [typeof(Program).Assembly];
@@ -38,6 +48,9 @@ builder.Services.AddOrderProcessingModuleServices(builder.Configuration, logger,
 // Set up MediatR
 builder.Services.AddMediatR(cfg =>
   cfg.RegisterServicesFromAssemblies(mediatRAssemblies.ToArray()));
+builder.Services.AddMediatRLoggingBehavior();
+builder.Services.AddMediatRFluentValidationBehavior();
+builder.Services.AddValidatorsFromAssemblyContaining<AddItemToCartCommandValidator>();
 
 // Add MediatR Domain Event Dispatcher
 builder.Services.AddScoped<IDomainEventDispatcher, MediatRDomainEventDispatcher>();
