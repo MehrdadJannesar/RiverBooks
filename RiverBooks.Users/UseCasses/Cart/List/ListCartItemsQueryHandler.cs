@@ -1,7 +1,7 @@
 ﻿using Ardalis.Result;
 using MediatR;
 using RiverBooks.Users.CartEndpoints;
-using RiverBooks.Users.Data;
+using RiverBooks.Users.Intefaces;
 
 namespace RiverBooks.Users.UseCasses.Cart.List;
 

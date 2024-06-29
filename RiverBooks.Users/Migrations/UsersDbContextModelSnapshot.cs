@@ -5,13 +5,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using RiverBooks.Users.Data;
+using RiverBooks.Users.Infrastructure.Data;
 
 #nullable disable
 
 namespace RiverBooks.Users.Migrations
 {
-    [DbContext(typeof(UsersDbContext))]
+  [DbContext(typeof(UsersDbContext))]
     partial class UsersDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

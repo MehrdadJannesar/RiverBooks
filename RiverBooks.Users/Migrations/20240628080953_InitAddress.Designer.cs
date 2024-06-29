@@ -6,13 +6,13 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using RiverBooks.Users.Data;
+using RiverBooks.Users.Infrastructure.Data;
 
 #nullable disable
 
 namespace RiverBooks.Users.Migrations
 {
-    [DbContext(typeof(UsersDbContext))]
+  [DbContext(typeof(UsersDbContext))]
     [Migration("20240628080953_InitAddress")]
     partial class InitAddress
     {

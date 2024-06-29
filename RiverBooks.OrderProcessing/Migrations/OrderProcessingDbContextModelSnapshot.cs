@@ -5,13 +5,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using RiverBooks.OrderProcessing;
+using RiverBooks.OrderProcessing.Infrastructure.Data;
 
 #nullable disable
 
 namespace RiverBooks.OrderProcessing.Migrations
 {
-    [DbContext(typeof(OrderProcessingDbContext))]
+  [DbContext(typeof(OrderProcessingDbContext))]
     partial class OrderProcessingDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

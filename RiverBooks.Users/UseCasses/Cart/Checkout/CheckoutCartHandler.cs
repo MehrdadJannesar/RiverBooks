@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Ardalis.Result;
+﻿using Ardalis.Result;
 using MediatR;
 using RiverBooks.OrderProcessing.Contracts;
-using RiverBooks.Users.Data;
+using RiverBooks.Users.Intefaces;
 
 namespace RiverBooks.Users.UseCasses.Cart.Checkout;
 internal class CheckoutCartHandler : IRequestHandler<CheckoutCartCommand, Result<Guid>>

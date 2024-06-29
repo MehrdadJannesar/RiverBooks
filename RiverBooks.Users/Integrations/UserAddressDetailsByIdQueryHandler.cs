@@ -1,6 +1,7 @@
 ﻿using Ardalis.Result;
 using MediatR;
 using RiverBooks.Users.Contracts;
+using RiverBooks.Users.Intefaces;
 
 
 namespace RiverBooks.Users.Integrations;

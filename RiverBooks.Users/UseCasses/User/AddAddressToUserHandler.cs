@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Ardalis.Result;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using RiverBooks.Users.Intefaces;
 using static RiverBooks.Users.ApplicationUser;
 
 namespace RiverBooks.Users.UseCasses.User;

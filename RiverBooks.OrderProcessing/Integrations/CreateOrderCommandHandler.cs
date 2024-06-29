@@ -3,7 +3,8 @@ using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using RiverBooks.OrderProcessing.Contracts;
-using RiverBooks.Users;
+using RiverBooks.OrderProcessing.Domain;
+using RiverBooks.OrderProcessing.Interfaces;
 using Serilog;
 
 namespace RiverBooks.OrderProcessing.Integrations;
