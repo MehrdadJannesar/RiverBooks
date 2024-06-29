@@ -3,7 +3,7 @@ using RiverBooks.SharedKernel;
 
 namespace RiverBooks.OrderProcessing.Domain;
 
-internal class Order:IHaveDomainEvents
+internal class Order : IHaveDomainEvents
 {
   public Guid Id { get; private set; } = Guid.NewGuid();
   public Guid UserId { get; private set; }
