@@ -5,7 +5,6 @@ using RiverBooks.Users.Intefaces;
 
 
 namespace RiverBooks.Users.Integrations;
-
 internal class UserAddressDetailsByIdQueryHandler :
   IRequestHandler<UserAddressDetailsByIdQuery, Result<UserAddressDetails>>
 {
