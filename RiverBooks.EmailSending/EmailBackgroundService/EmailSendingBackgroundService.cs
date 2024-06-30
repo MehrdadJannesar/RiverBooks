@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Hosting;
+﻿using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Serilog;
 
 namespace RiverBooks.EmailSending;
-internal partial class EmailSendingBackgroundService:BackgroundService
+
+internal class EmailSendingBackgroundService : BackgroundService
 {
   private readonly ILogger<EmailSendingBackgroundService> _logger;
   private readonly ISendEmailsFromOutboxService _sendEmailsFromOutboxService;
 
-  public EmailSendingBackgroundService(ILogger<EmailSendingBackgroundService> logger
-    , ISendEmailsFromOutboxService sendEmailsFromOutboxService)
+  public EmailSendingBackgroundService(ILogger<EmailSendingBackgroundService> logger,
+    ISendEmailsFromOutboxService sendEmailsFromOutboxService)
   {
     _logger = logger;
     _sendEmailsFromOutboxService = sendEmailsFromOutboxService;

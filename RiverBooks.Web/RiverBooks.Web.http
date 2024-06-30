@@ -38,7 +38,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "id": "8AFCE069-B341-488D-89E7-FEE321DF6E95",
+  "id": "8afce069-b341-488d-89e7-fee321df6e95",
   "price": 9.99
 }
 ###
@@ -49,7 +49,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "Email": "jannesar29.computer@gmail.com",
+  "Email": "jannesar30.computer@gmail.com",
   "Password":"Password@123"
 }
 
@@ -66,7 +66,8 @@ Content-Type: application/json
 }
 ###
 
-@token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbEFkZHJlc3MiOiJqYW5uZXNhcjMuY29tcHV0ZXJAZ21haWwuY29tIiwiaWF0IjoxNzE5NjczNDYzLCJleHAiOjE3MTk2NzcwNjMsIm5iZiI6MTcxOTY3MzQ2M30.8GYbjxxMVodt9dGuUAXUnFxaqLZTphPljxQMoVG5NvA
+@token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbEFkZHJlc3MiOiJqYW5uZXNhcjMuY29tcHV0ZXJAZ21haWwuY29tIiwiaWF0IjoxNzE5NzMxNjIyLCJleHAiOjE3MTk3MzUyMjIsIm5iZiI6MTcxOTczMTYyMn0.FZqXql5S3PN_eOfH3NmekrWMDlMd0ON1osH4SsFmpq8
+
 
 # Add item to cart
 POST {{RiverBooks.Web_HostAddress}}/cart

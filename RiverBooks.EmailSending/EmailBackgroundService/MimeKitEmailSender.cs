@@ -3,7 +3,7 @@ using MailKit.Net.Smtp;
 using Microsoft.Extensions.Logging;
 using MimeKit;
 
-namespace RiverBooks.EmailSending;
+namespace RiverBooks.EmailSending.EmailBackgroundService;
 
 public class MimeKitEmailSender : ISendEmail
 {
@@ -34,4 +34,3 @@ public class MimeKitEmailSender : ISendEmail
     }
   }
 }
-

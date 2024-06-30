@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 using MongoDB.Driver;
 using static RiverBooks.EmailSending.EmailSendingBackgroundService;
 
-namespace RiverBooks.EmailSending;
+namespace RiverBooks.EmailSending.EmailBackgroundService;
 internal interface IGetEmailsFromOutboxService
 {
   Task<Result<EmailOutboxEntity>> GetUnprocessedEmailEntity();
